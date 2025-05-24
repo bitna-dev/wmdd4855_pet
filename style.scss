@@ -1,0 +1,87 @@
+@mixin inputs {
+	height: 30px;
+	border: none;
+	border-bottom: 1px solid #e9e9e9;
+	outline: none;
+	font-size: 0.9rem;
+}
+
+@mixin buttons($bg, $font) {
+	background-color: $bg;
+	color: $font;
+	padding: 1rem 2rem;
+	border: none;
+	border-radius: 10px;
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+	min-height: 100vh;
+	width: 100%;
+	color: #7e7e7e;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+header {
+	text-align: center;
+	padding: 2rem;
+}
+section {
+	padding: 2rem;
+	display: flex;
+	justify-content: center;
+}
+input {
+	@include inputs;
+}
+select {
+	@include inputs;
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 1px solid #e9e9e9;
+	padding: 2rem;
+	gap: 1.4rem;
+	min-width: 480px;
+	max-width: 800px;
+	width: 100%;
+
+	&--group {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		gap: 0.2rem;
+		padding: 0 2rem;
+	}
+}
+
+.btn {
+	@include buttons(indigo, white);
+	width: 90%;
+}
+
+.divider {
+	height: 1px;
+	background: #e9e9e9;
+	margin: 2rem;
+}

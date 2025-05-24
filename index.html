@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WMDD:4855 | Pet App</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="./app.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<h1>The Pet App</h1>
+		</header>
+		<main>
+			<section>
+				<form action="#" class="form">
+					<div class="form--group">
+						<label for="name">Name</label>
+						<input type="text" id="name" name="name" required />
+					</div>
+					<div class="form--group">
+						<label for="birth">Date of Birth</label>
+						<input type="date" id="birth" name="birth" required />
+					</div>
+					<div class="form--group">
+						<label for="petType">Pet Type</label>
+						<select name="petType" id="petType" required>
+							<option selected disabled value="">
+								==== select a pet type ====
+							</option>
+							<option value="Cat">Cat</option>
+							<option value="Dog">Dog</option>
+						</select>
+					</div>
+					<div class="form--group">
+						<label for="petBreed">Pet Breed</label>
+						<select name="petBreed" id="petBreed" required></select>
+					</div>
+					<button type="submit" class="btn">Add Pet</button>
+				</form>
+			</section>
+			<div class="divider visually-hidden"></div>
+			<section class="visually-hidden section--table">
+				<table>
+					<thead>
+						<th>Name</th>
+						<th>Date of Birth</th>
+						<th>Pet Breed</th>
+					</thead>
+					<tbody id="petTableBody">
+						<!-- JS -->
+					</tbody>
+				</table>
+			</section>
+		</main>
+	</body>
+</html>
